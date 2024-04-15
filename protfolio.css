@@ -66,12 +66,11 @@ section {
     position: relative;
     min-height: 100vh;
     width: 100%;
-     background-image: url(/Assest/gk.png);
+    background-image: url(/Assest/gk.png);
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
 }
 
 .home img {
