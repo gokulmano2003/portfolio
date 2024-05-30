@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Payslip</h1>
+    <div class="container">
+        <table>
+            <tr>
+                <td><label class="laput">Basic Payslip</label></td>
+                <td><input type="text" class="input" placeholder="Enter Pay" id="basic" onkeyup="calculateSalary()"></td>
+            </tr>
+            <tr>
+                <td><label class="laput">D</label></td>
+                <td><input type="text" class="input" id="d"></td>
+            </tr>
+            <tr>
+                <td><label class="laput">Gok</label></td>
+                <td><input type="text" class="input" id="Gok"></td>
+            </tr>
+            <tr>
+                <td><label class="laput">Kul</label></td>
+                <td><input type="text" class="input" id="Kul"></td>
+            </tr>
+            <tr>
+                <td><label class="laput">Ul</label></td>
+                <td><input type="text" class="input" id="Ul"></td>
+            </tr>
+        </table>
+
+        <script>
+            function calculateSalary() {
+                var basic = document.getElementById("basic").value;
+                var d = (basic * 0.05); // 5% of basic
+                var Gok = (basic * 0.08); // 8% of basic
+                var Kul = (parseFloat(d) + parseFloat(Gok)); // Sum of d and Gok
+                var ul = (parseFloat(Kul) - parseFloat(Gok)); // Kul - Gok
+
+                document.getElementById("d").value = d;
+                document.getElementById("Gok").value = Gok;
+                document.getElementById("Kul").value = Kul;
+                document.getElementById("Ul").value = ul;
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>
