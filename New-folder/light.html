@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .bulb{
+       display: flex;
+       justify-content: center;
+    
+      }
+      .cat{
+        display: flex;
+        justify-content: center;
+      }
+      .box{
+        width: 50vh;
+        height: 20vh;
+        margin-left: 82vh;
+        background-color: gray;
+      }
+      .btnon{
+        width: 10vh;
+        height: 10vh;
+        border: none;
+
+      }
+      .btnon:hover{
+        background-color: lightgreen;
+        width: 12vh;
+        height:12vh;
+        border: 2px solid black;
+        font-weight: 500;
+        font-size: x-large;
+
+    }
+    .btnoff{
+        width: 10vh;
+        height: 10vh;
+        border: none;
+    }
+    .btnoff:hover{
+        background-color:lightcoral;
+        width: 12vh;
+        height:12vh;
+        border: 2px solid black;
+        font-weight: 500;
+        font-size: x-large;
+    }
+    </style>
+</head>
+<body>
+    <div style="background-color: black; height: 100vh;" id="back">
+        <div class="bulb">
+            <img id="light" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" height="240vh" alt="bulboff">
+        </div>
+        <div class="cat">
+            <img id="eye" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" height="245vh" alt="catimage">
+        </div>
+        <div class="box">
+           <center><p style="position: relative;top: 10%; font-weight: bold; font-size:large;">Switched Off</p>
+            <input type="button" class="btnon" value="ON" style="border-radius: 10px;" id="onbtn" onclick="lighton()">
+            <input type="button" class="btnoff" value="Off" style="border-radius: 10px;" id="offbtn" onclick="lightoff()">
+        </center>
+
+        </div>
+
+    </div>
+    <script src="light.js"></script>
+</body>
+</html>
